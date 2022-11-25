@@ -1,4 +1,111 @@
+* {
+  font-family: Helvetica, sans-serif;
+  font-size: 12pt;
+  line-height: 150%;
+}
+
+.fixed-width {
+  width: 1000px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+
+header {
+  height: 80px;
+  display: flex;
+  width: 1000px;
+  margin: auto;
+}
+
+header a, header a img {
+  height: inherit;
+  
+}
+
+header nav {
+  flex-grow: 1;
+  text-align: right;
+  margin: auto;
+}
+
+header nav a {
+  margin: 0 20px;
+}
+
+header nav a:visited, header nav a:link, header nav a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  margin: auto;
+}
+
+.first img {
+  width: 1000px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+.feature img {
+  height: 80px;
+}
+
+.feature-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+
 footer {
   background-color: grey;
   color: white;
+}
+
+.footer-area {
+  display: flex;
+  padding: 30px 0;
+}
+
+.footer-element {
+  flex-grow: 1;
+  flex-basis: 0;
+  text-align: center;
+}
+/*brauche .footer-nav glaube ich nicht.*/
+.footer-nav {
+  text-align: center;
+}
+
+.footer-nav a {
+  margin: 0 20px;
+  font-size: 0.8rem;
+}
+
+.footer-nav a:link, .footer-nav a:visited, .footer-nav a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+footer img {
+  height: 50px;
 }

@@ -2,11 +2,12 @@
 <html lang="de">
 <head>
   <title>Powertrack</title>
-  <link rel="stylesheet" href="common.css"
+  <link rel="stylesheet" href="common.css"/>
 </head>
 
 <body>
-  <header>
+  <header class="fiixed-width">
+
     <a href="index.html">
       <img src="img/powertrack_logo.png">
     </a>
@@ -17,32 +18,37 @@
     </nav>
   </header>
 
-<main>
+<main class="fixed-width features">
 
-  <div>
+  <div class="first img">
     <img src="img/banner.png">
   </div>
-  <div>
+  <div class="feature">
     <img src="img/counter_dark.png">
-    <p>Erfassung der Zählerstände</p>
+    <p class="feature-title">Erfassung der Zählerstände</p>
     <p>Manuelle Erfassung der <br> Zählerstände oder wahlweiser <br> Abruf direkt vom Netzbetreiber.</p>
   </div>
 
-  <div>
+  <div class="feature">
   <img src="img/energy-consumption_dark.png">
-  <p>Ermittlung des Verbrauchs</p>
-  <p>Automatische Ermittlung des Verbrauchs der erfassten Zählerstände.</p>
+  <p class="feature-title">Ermittlung des Verbrauchs</p>
+  <p class="feature-description">Automatische Ermittlung des Verbrauchs der erfassten Zählerstände.</p>
 </div>
+</main>
   <footer>
-    <a href="https://www.dhbw-vs.de/">
-      <img src="img/dhbw_logo.png">  
-    </a>
-
-    <nav>
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </nav>
-
+    <div class="footer-area">
+      <div class="footer-element">
+        <a href="https://www.dhbw-vs.de/">
+          <img src="img/dhbw_logo.png">  
+        </a>
+      </div>
+      <div class="footer-element footer-nav">
+        <nav>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </nav>
+      </div>
+  </div>
   </footer>
 
 </body>
