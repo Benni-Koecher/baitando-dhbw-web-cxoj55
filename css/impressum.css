@@ -1,0 +1,17 @@
+.highlight {
+  font-weight: bold;
+}
+
+.headline {
+  display: flex;
+}
+
+.headline * {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.headline a {
+  flex-grow: 1;
+  text-align: right;
+}
