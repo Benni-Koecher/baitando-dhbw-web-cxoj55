@@ -6,6 +6,7 @@
 
 .fixed-width {
   width: 1000px;
+  margin: auto;
 }
 
 body {
@@ -45,35 +46,11 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-main {
-  margin: auto;
-}
-
-.first img {
-  width: 1000px;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: auto;
-  grid-gap: 100px;
-  margin: auto;
-  text-align: center;
-}
-
-.feature img {
-  height: 80px;
-}
-
-.feature-title {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
 
 footer {
   background-color: grey;
   color: white;
+  margin-top: 20px;
 }
 
 .footer-area {
@@ -83,16 +60,16 @@ footer {
 
 .footer-element {
   flex-grow: 1;
-  flex-basis: 0;
-  text-align: center;
+  flex-basis: 1;
+  text-align: left;
 }
-/*brauche .footer-nav glaube ich nicht.*/
+
 .footer-nav {
   text-align: center;
 }
 
 .footer-nav a {
-  margin: 0 20px;
+  margin: 0 30px;
   font-size: 0.8rem;
 }
 
@@ -108,4 +85,23 @@ footer {
 
 footer img {
   height: 50px;
+}
+
+.copyright {
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 120%;
+}
+
+h2 {
+  font-size: 1.3rem;
+  /*margin-top: 40px;*/
 }

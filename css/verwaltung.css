@@ -1,0 +1,33 @@
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  
+}
+
+.headline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.headline * {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.headline a {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.headline-button {
+  width: 250px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-color: 2px black;
+  border-radius: 5px;
+}
+
+.headline-button:hover {
+  background-color: red;
+}

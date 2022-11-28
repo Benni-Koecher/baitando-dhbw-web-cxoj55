@@ -1,0 +1,62 @@
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+label {
+  font-weight: bold;
+}
+
+form div {
+  margin-bottom: 30px;
+}
+
+form div p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+input {
+  padding: 5px;
+}
+
+.create-grp-title input {
+  width: 30%
+}
+
+.create-grp-due input {
+  width: 10%;
+}
+
+.create-grp-counter input {
+  width: 30%;
+}
+
+.create-grp-actions {
+  text-align: center;
+}
+
+.abled-button {
+  width: 250px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-color: 2px black;
+  border-radius: 5px;
+}
+
+.disabled-button {
+  width: 250px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-color: 2px black;
+  border-radius: 5px;
+}
+
+button:hover {
+  color: black;
+  background-color: #e22329;
+  cursor: pointer;
