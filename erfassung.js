@@ -7,7 +7,7 @@ function initialize() {
         var counter = getTaskById(counterId);
         if (counter) {
             setValueById("due", counter.due);
-            setValueById("counter", counter.counter);
+            setValueById("counter", counter.counters);
 
             setTextContentById("page-title", "Aufgabe bearbeiten");
             setTextContentById("save-btn", "Speichern");
