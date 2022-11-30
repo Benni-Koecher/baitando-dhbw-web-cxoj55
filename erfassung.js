@@ -6,16 +6,14 @@ function initialize() {
         console.debug(`Page loaded in edit mode for task with ID: ${counterId}`);
         var counter = getTaskById(counterId);
         if (counter) {
-            setValueById("title", task.title);
-            setValueById("notes", task.notes);
-            setValueById("due", task.due);
-            setValueById("responsible", task.responsible);
+            setValueById("due", counter.due);
+            setValueById("counter", counter.counter);
 
             setTextContentById("page-title", "Aufgabe bearbeiten");
             setTextContentById("save-btn", "Speichern");
-            setAttributeById("save-btn", "onclick", `save('${taskId}')`);
+            setAttributeById("save-btn", "onclick", `save('${counterId}')`);
         } else {
-            console.error("Task not found for ID: " + taskId);
+            console.error("Counter not found for ID: " + counterId);
         }
     } else {
         console.debug("Page loaded in create mode");
