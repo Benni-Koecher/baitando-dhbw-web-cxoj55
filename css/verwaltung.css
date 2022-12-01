@@ -31,3 +31,95 @@ h1 {
 .headline-button:hover {
   background-color: red;
 }
+
+.list-alllaunches{
+  padding-left: 0px;
+}
+
+.list-alllaunches li{
+  display: grid;
+  grid-template-columns: 25% 35% 30% 10%;
+  padding: 10px 0px;
+  justify-content: space-between;
+}
+
+.list-alllaunches img {
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+}
+
+.list-alllaunches div{
+  padding: 5px 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.list-alllaunches p{
+  font-size: 18px;
+  margin: auto;
+  font-weight: bold;
+}
+
+.list-alllaunches li:nth-child(odd){
+  background-color: #E6E6E6; 
+}
+
+.list-alllaunches ol{
+  display: grid;
+  grid-template-columns: 25% 35% 30% 10%;
+  padding: 10px 0px;
+  justify-content: space-between;
+  background-color: #EA1F25;
+  color: white;
+}
+
+
+.headline-date{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.headline-counter{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 250px;
+}
+
+.energy-consumption{
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+
+
+.p-energy-consumption h2{
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+.headline-counter-total{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 250px;
+}
+
+.energy-consumption-total{
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+
+
+.p-energy-consumption-total h2{
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  margin-top: auto;
+  margin-bottom: auto;
+}

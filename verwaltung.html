@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="css/verwaltung.css"/>
 </head>
 
-<body>
+<body onload="initialize()">
+
   <header class="fixed-width">
     <a href="index.html">
       <img src="img/powertrack_logo.png">
@@ -21,17 +22,17 @@
   <main class="fixed-width">
 
       <div class="headline">
-        <h1>Zählerstände verwalten</h1>
+        <h1>Z&auml;hlerst&auml;nde verwalten</h1>
+
         <a href="erfassung.html">
-          <button class="headline-button">Neuen Zählerstand erfassen</button>
+          <button class="headline-button">Neuen Z&auml;hlerstand erfassen</button>
         </a>
       </div>  
       
-    <div>
-      <img src="img/calendar.png">
-      <img src="img/counter_dark.png">
-      <img src="img/energy-consumption_dark.png">
-      <img src="img/delete.png">
+      <div class="administration-body">
+      <ul class="list-allcaptures" id="captures">
+      </ul>
+    </div>
       
     
   
@@ -57,6 +58,9 @@
   </footer>
 
 </footer>
+
+<script src="js/common.js"></script>
+<script src="js/verwaltung.js"></script>
 
 </body>
 

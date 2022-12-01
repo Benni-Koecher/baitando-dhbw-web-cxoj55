@@ -1,18 +1,18 @@
 function initialize() {
   console.debug("Initializing create and edit page")
 
-  var launchId = new URLSearchParams(location.search).get("id");
-    if (launchId) {
-        console.debug(`Page loaded in edit mode for launch with ID: ${launchId}`);
-        var launch = getLaunchById(loadStoredLaunches(),launchId);
-        if (launch) {
-            setValueById("date", launch.date);
-            setValueById("counter", launch.counter);
+  var captureId = new URLSearchParams(location.search).get("id");
+    if (captureId) {
+        console.debug(`Page loaded in edit mode for capture with ID: ${captureId}`);
+        var capture = getCaptureById(loadStoredCaptures(),captureId);
+        if (capture) {
+            setValueById("date", capture.date);
+            setValueById("counter", capture.counter);
 
             setTextContentById("save-button", "Speichern");
-            setAttributeById("save-button", "onclick", `save('${launchId}')`);
+            setAttributeById("save-button", "onclick", `save('${captureId}')`);
         } else {
-            console.error("Launch not found for ID: " + launchId);
+            console.error("Capture not found for ID: " + captureId);
         }
     } else {
         console.debug("Page loaded in create mode");
@@ -66,16 +66,16 @@ function initialize() {
   }
   
   /**
-  * Searches for a launch contained in the local storage.
+  * Searches for a capture contained in the local storage.
   *
-  * @param launches The list of launches to search in.
-  * @param id The ID of the launch to search for.
-  * @returns {any|undefined} The launch, if it was found.
+  * @param captures The list of captures to search in.
+  * @param id The ID of the capture to search for.
+  * @returns {any|undefined} The capture, if it was found.
   */
-  function getLaunchById(launches, id) {
-    for (var launch of launches) {
-        if (launch.id === id) {
-            return launch;
+  function getCaptureById(captures, id) {
+    for (var capture of captures) {
+        if (capture.id === id) {
+            return capture;
         }
     }
     return undefined;
@@ -84,49 +84,49 @@ function initialize() {
   /**
   * Save the data contained in the form.
   *
-  * @param id The ID of the launch, if a launch should be updated.
+  * @param id The ID of the capture, if a capture should be updated.
   */
   function save(id) {
-    var launches = loadStoredLaunches();
-    var launch = createLaunchFromInput(id);
+    var captures = loadStoredCaptures();
+    var capture = createCaptureFromInput(id);
   
     if (id) {
-        replaceLaunch(launches, id, launch);
+        replaceCapture(captures, id, capture);
     } else {
-        launches.push(createLaunchFromInput());
+        captures.push(createCaptureFromInput());
     }
-    storeLaunches(launches);
-    console.debug("Launch saved");
+    storeCaptures(captures);
+    console.debug("Capture saved");
   }
   
   /**
-  * Replace a launch with a specific ID in a launch array.
+  * Replace a capture with a specific ID in a capture array.
   *
-  * @param launches The array in which the launch should be replaced.
-  * @param idToReplace The ID of the launch to replace.
-  * @param updatedLaunch The launch object replacing the launch with the given ID.
+  * @param captures The array in which the capture should be replaced.
+  * @param idToReplace The ID of the capture to replace.
+  * @param updatedCapture The capture object replacing the capture with the given ID.
   */
-  function replaceLaunch(launches, idToReplace, updatedLaunch) {
-    if (launches && idToReplace && updatedLaunch) {
-        for (var i = 0; i < launches.length; i++) {
-            if (launches[i].id === idToReplace) {
-                launches[i] = updatedLaunch
+  function replaceCapture(captures, idToReplace, updatedCapture) {
+    if (captures && idToReplace && updatedCapture) {
+        for (var i = 0; i < captures.length; i++) {
+            if (captures[i].id === idToReplace) {
+                captures[i] = updatedCapture
                 return;
             }
         }
     } else {
-        console.error("Invalid arguments to replace launch");
+        console.error("Invalid arguments to replace capture");
     }
     console.error(`Element with ID not known: ${idToReplace}`);
   }
   
   /**
-  * Create a launch object from the values of the form input fields related to a launch.
+  * Create a capture object from the values of the form input fields related to a capture.
   *
   * @param id An existing ID, if it is known. If not provided, a new ID will be generated.
-  * @returns {{date: (*|undefined), counter: (*|undefined), id: string}} Launch object.
+  * @returns {{date: (*|undefined), counter: (*|undefined), id: string}} Capture object.
   */
-  function createLaunchFromInput(id) {
+  function createCaptureFromInput(id) {
     var date = getInputValueById("date");
     var counter = getInputValueById("counter");
   
