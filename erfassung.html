@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
   <title>Powertrack</title>
   <link rel="stylesheet" href="css/common.css"/>
   <link rel="stylesheet" href="css/erfassung.css">
 </head>
 
-<body>
+<body onload="initialize()">
+
   <header class="fixed-width">
     <a href="index.html">
       <img src="img/powertrack_logo.png">
@@ -19,19 +21,19 @@
   </header>
 
 <main class="fixed-width">
-<h1>Zählerstand erfassen</h1>
+<h1>Z&auml;hlerstand erfassen</h1>
 
 <form>
-  <div class="create-grp-due">
-    <label for="due">Datum*</label>
-    <p>Tragen Sie hier das Ablesedatum des Zählerstandes ein.</p>
-    <input id="due" type="date">
+  <div class="create-grp-date">
+    <label for="date">Datum*</label>
+    <p>Tragen Sie hier das Ablesedatum des Z&auml;hlerstandes ein.</p>
+    <input id="date" type="date">
   </div>
 
   <div class="create-grp-counter">
-  <label for="counters">Zählerstand in kWh*</label>
-  <p>Tragen Sie hier den abgelesenen Zählerstand ein.</p>
-  <input id="counters" type="number">
+  <label for="counters">Z&auml;hlerstand in kWh*</label>
+  <p>Tragen Sie hier den abgelesenen Z&auml;hlerstand ein.</p>
+  <input id="counter" type="number">
 </div>
 </form>
 
