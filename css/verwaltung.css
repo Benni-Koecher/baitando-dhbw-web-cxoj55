@@ -32,40 +32,40 @@ h1 {
   background-color: red;
 }
 
-.list-alllaunches{
+.list-allcaptures{
   padding-left: 0px;
 }
 
-.list-alllaunches li{
+.list-allcaptures li{
   display: grid;
   grid-template-columns: 25% 35% 30% 10%;
   padding: 10px 0px;
   justify-content: space-between;
 }
 
-.list-alllaunches img {
+.list-allcaptures img {
   width: 50px;
   height: 50px;
   margin-left: auto;
 }
 
-.list-alllaunches div{
+.list-allcaptures div{
   padding: 5px 10px;
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.list-alllaunches p{
+.list-allcaptures p{
   font-size: 18px;
   margin: auto;
   font-weight: bold;
 }
 
-.list-alllaunches li:nth-child(odd){
+.list-allcaptures li:nth-child(odd){
   background-color: #E6E6E6; 
 }
 
-.list-alllaunches ol{
+.list-allcaptures ol{
   display: grid;
   grid-template-columns: 25% 35% 30% 10%;
   padding: 10px 0px;
